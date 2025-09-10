@@ -3,10 +3,16 @@ def main():
     b = int(input("Введите второе число: "))
 
     summa = a + b
-    average = (a + b) / 2
+    if  (a + b) % 2==0:
+        average = int((a+b)/2)#Если число целое, то будет формат числа без <.0>
+    else:
+        average = (a + b)/2
     # Проверяем деление на ноль для частного и остатка
     if b != 0:
-        quotient = a / b
+        if a%b==0: 
+            quotient = int(a / b) #Если число целое, то будет формат числа без <.0>
+        else:
+            quotient = a/b
         remainder = a % b
     else:
         quotient = "деление на ноль невозможно"
